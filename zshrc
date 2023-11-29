@@ -166,4 +166,5 @@ export NVM_DIR="$HOME/.nvm"
 # antidote (loads from ~/.config/zsh/.zsh_plugins.txt)
 source /opt/homebrew/opt/antidote/share/antidote/antidote.zsh
 antidote load
+autoload -Uz compinit && compinit -i
 
