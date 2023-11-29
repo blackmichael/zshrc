@@ -146,7 +146,8 @@ export BAZEL_USE_CPP_ONLY_TOOLCHAIN=1
 # Protobuf
 export PATH="/opt/homebrew/opt/protobuf@3/bin:$PATH"
 
-# source $ZSHDIR/zshrc_options
+# Jump
+eval "$(jump shell zsh)"
 
 # Aliases
 alias curltime="curl -sL -w '   namelookup: %{time_namelookup}\n      connect: %{time_connect}\n   appconnect: %{time_appconnect}\n  pretransfer: %{time_pretransfer}\n     redirect: %{time_redirect}\nstarttransfer: %{time_starttransfer}\n        total: %{time_total}\n' "

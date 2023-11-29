@@ -25,8 +25,6 @@
 # assume GitHub.com, then you can use the user/repo shorthand.
 #
 ###
-bigH/git-fuzzy path:bin kind:path
-Aloxaf/fzf-tab
 
 ### Local Plugins
 #
@@ -137,6 +135,8 @@ greymd/docker-zsh-completion
 # zsh-users/zsh-completions is a popular plugin for adding supplemental completions.
 # We combine the `path:` and `kind:fpath` annotations here:
 zsh-users/zsh-completions path:src kind:fpath
+Aloxaf/fzf-tab
+bigH/git-fuzzy path:bin kind:path
 
 # Compinit plugins should be near the end of .zsh_plugins.txt so that $fpath has been
 # fully populated. Use zsh-utils for its completion plugin.
