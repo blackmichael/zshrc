@@ -58,5 +58,8 @@ for pkg in "${packages[@]}"; do
     fi
 done
 
+# Shell history
+curl --proto '=https' --tlsv1.2 -LsSf https://setup.atuin.sh | sh
+
 echo "All packages installed successfully!"
 
