@@ -2,6 +2,7 @@
 
 # Define a list of packages to install
 packages=(
+    "antidote"
     "wget"
     "tree"
     "fzf"

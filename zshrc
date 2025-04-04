@@ -4,7 +4,8 @@
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
-source $(brew --prefix)/share/powerlevel10k/powerlevel10k.zsh-theme
+# Not sure why this doesn't work:
+# source $(brew --prefix)/share/powerlevel10k/powerlevel10k.zsh-theme
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
@@ -58,6 +59,7 @@ zstyle ':completion:*:*:docker:*' option-stacking yes
 zstyle ':completion:*:*:docker-*:*' option-stacking yes
 
 ## Fuzzy Finder Auto Completion
+export FZF_PATH=$(brew --prefix)/opt/fzf
 if [[ -d "/opt/homebrew/opt/fzf/shell" ]]; then
   FZF_SHELL="/opt/homebrew/opt/fzf/shell"
 else
@@ -164,7 +166,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
 # antidote (loads from ~/.config/zsh/.zsh_plugins.txt)
-source /opt/homebrew/opt/antidote/share/antidote/antidote.zsh
+source $(brew --prefix)/opt/antidote/share/antidote/antidote.zsh
 antidote load
 autoload -Uz compinit && compinit -i
 
